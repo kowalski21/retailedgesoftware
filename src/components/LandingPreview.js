@@ -1,6 +1,9 @@
 import { ChevronRightIcon, StarIcon } from "@heroicons/react/solid";
 import { toast } from "sonner";
 import { useState } from "react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 export default function Example() {
   const [email, setEmail] = useState("");
   const notifyEmail = (e) => {
@@ -10,7 +13,7 @@ export default function Example() {
   };
 
   return (
-    <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
+    <div className={`bg-white pb-8 sm:pb-12 lg:pb-12 ${inter.className}`}>
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
           <div>
